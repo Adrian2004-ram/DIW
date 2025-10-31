@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+}
+
+.cuadro {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin: 10px;
+        position: relative;
+    float: left;
+}
+
+.da {
+
+}

@@ -1,0 +1,96 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: linear-gradient(to right ,#F65, #FFC);
+}
+
+#contenedor {
+    background-color: white;
+    height: 100vh;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+nav {
+    margin: 1rem 0;
+}
+
+/*ul*/
+
+.listMenu {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    /*Escritorio*/
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+/*Clase con iconos*/
+.conIconos {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*li*/
+
+.liNAV {
+   list-style-type: none;
+    flex-grow: 1;
+    display: flex;
+}
+
+/*a*/
+
+.btmNAV {
+    background-color: #55F;
+    padding: 10px 0;
+    flex-grow: 1;
+    text-align: center;
+    color: #EEE;
+}
+
+.btmIcon {
+    flex-basis: 50%;
+    /*flex para el icono y los p*/
+    display: flex;
+    flex-direction: row;
+    /*Escritorio*/
+    @media (min-width: 768px) {
+        flex: 1 0 auto;
+    }
+}
+
+.btmNAV:hover {
+    background-color: #22F;
+    cursor: pointer;
+}
+
+/*icono*/
+
+.icono {
+    font-size: 2rem;
+    margin-right: 5px;
+}
+
+/*p de nav*/
+.tituloMenu {
+    font-size: 22px;
+}
+
+.descripcionMenu {
+    font-size: 13px;
+}
+
+/*Flex a los p y al incono*/
+
+.flexP {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
