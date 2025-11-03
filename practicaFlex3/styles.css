@@ -41,8 +41,20 @@ nav {
 
 .liNAV {
    list-style-type: none;
-    flex-grow: 1;
-    display: flex;
+   display: flex;
+    /*Escritorio*/
+    @media (min-width: 768px) {
+        flex: 1 0 auto;
+    }
+}
+
+.liICON {
+    list-style-type: none;
+    flex: 0 0 50%;
+    /*Escritorio*/
+    @media (min-width: 768px) {
+        flex: 1 0 auto;
+    }
 }
 
 /*a*/
@@ -56,13 +68,12 @@ nav {
 }
 
 .btmIcon {
-    flex-basis: 50%;
     /*flex para el icono y los p*/
     display: flex;
     flex-direction: row;
+    justify-content: center;
     /*Escritorio*/
     @media (min-width: 768px) {
-        flex: 1 0 auto;
     }
 }
 
@@ -93,4 +104,45 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+/*ul de sublista NOSOTROS*/
+
+.ulPadreNosotros {
+    display: flex;
+    flex-direction: column;
+}
+
+/*li de sublista NOSOTROS*/
+
+.liNosPadre {
+    display: flex;
+    flex-direction: column;
+}
+
+.liNosPadre:hover .ulPadreNosotros{
+        background-color: #F65;
+}
+
+.liNosPadre:hover .btmNosPadre{
+        background-color: #F65;
+}
+
+.liNosotros {
+    display: flex;
+}
+
+/*a de sublista NOSOTROS*/
+
+.btmNosPadre {
+    text-align: start;
+    padding: 0 1rem;
+}
+
+.btmNosotros {
+    margin: 10px;
+    text-align: start;
+        padding: 0 1rem;
+
+
 }
