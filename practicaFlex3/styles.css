@@ -106,43 +106,67 @@ nav {
     align-items: flex-start;
 }
 
+/*li de sublista NOSOTROS*/
+
 /*ul de sublista NOSOTROS*/
 
 .ulPadreNosotros {
     display: flex;
     flex-direction: column;
+    background-color: #22F;
 }
 
-/*li de sublista NOSOTROS*/
+/*etiqueta de a de nav Dropown*/
+.btmDropDown {
+    text-align: start;
+    padding: 10px;
+}
 
+/*li nosotros*/
 .liNosPadre {
     display: flex;
     flex-direction: column;
 }
 
+/*modifica ul de nosotros*/
 .liNosPadre:hover .ulPadreNosotros{
-        background-color: #F65;
-}
-
-.liNosPadre:hover .btmNosPadre{
-        background-color: #F65;
+        background-color: #22F;
 }
 
 .liNosotros {
     display: flex;
 }
 
+.liNosotros:hover .btmNosotros {
+    background-color: #F65;
+}
+
+/*modifica a de li nosotros*/
+.liNosPadre:hover .btmNosPadre{
+    background-color: #22F;
+}
+
 /*a de sublista NOSOTROS*/
 
 .btmNosPadre {
-    text-align: start;
-    padding: 0 1rem;
+    background-color: #22F;
 }
 
 .btmNosotros {
     margin: 10px;
     text-align: start;
-        padding: 0 1rem;
+    padding: 10px;
+    background-color: #22F;
+}
 
+.liNosPadre {
+    position: relative;
+}
 
+.ulPadreNosotros {
+    position: relative;
+}
+
+.liNosPadre:active .ulPadreNosotros {
+    display: none;
 }
