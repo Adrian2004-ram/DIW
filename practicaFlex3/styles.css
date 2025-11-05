@@ -19,6 +19,8 @@ nav {
     margin: 1rem 0;
 }
 
+/*-----PRIMER NAV-----*/
+
 /*ul*/
 
 .listMenu {
@@ -29,12 +31,6 @@ nav {
     @media (min-width: 768px) {
         flex-direction: row;
     }
-}
-
-/*Clase con iconos*/
-.conIconos {
-    flex-direction: row;
-    flex-wrap: wrap;
 }
 
 /*li*/
@@ -48,15 +44,6 @@ nav {
     }
 }
 
-.liICON {
-    list-style-type: none;
-    flex: 0 0 50%;
-    /*Escritorio*/
-    @media (min-width: 768px) {
-        flex: 1 0 25%;
-    }
-}
-
 /*a*/
 
 .btmNAV {
@@ -67,6 +54,35 @@ nav {
     color: #EEE;
 }
 
+/*cambiamos a cuando ponemos cursor encima*/
+
+.btmNAV:hover {
+    background-color: #22F;
+    cursor: pointer;
+}
+
+/*-----SEGUNDO NAV CON ICONOS-----*/
+
+/*ul*/
+/*hereda de listaMenu*/
+.conIconos {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*li*/
+/*hereda de liNAV tambien*/
+.liICON {
+    list-style-type: none;
+    flex: 0 0 50%;
+    /*Escritorio*/
+    @media (min-width: 768px) {
+        flex: 1 0 25%;
+    }
+}
+
+/*a*/
+/*hereda de btmNAV tambien*/
 .btmIcon {
     /*flex para el icono y los p*/
     display: flex;
@@ -77,25 +93,11 @@ nav {
     }
 }
 
-.btmNAV:hover {
-    background-color: #22F;
-    cursor: pointer;
-}
-
 /*icono*/
 
 .icono {
     font-size: 2rem;
     margin-right: 5px;
-}
-
-/*p de nav*/
-.tituloMenu {
-    font-size: 22px;
-}
-
-.descripcionMenu {
-    font-size: 13px;
 }
 
 /*Flex a los p y al incono*/
@@ -106,18 +108,23 @@ nav {
     align-items: flex-start;
 }
 
-/*DROPDOWN*/
+/*p*/
 
-/*li de sublista*/
-.liSublista {
-    display: flex;
+.tituloMenu {
+    font-size: 22px;
 }
 
-/*li de nav DROPDOWN*/
-.liSubPadre {
-
+.descripcionMenu {
+    font-size: 13px;
 }
 
+/*-----SEGUTERCERNDO NAV CON DROPDOWN-----*/
+
+/*se usa el mismo ul que el primero, sin añadir nada*/
+/*hereda de listaMenu*/
+
+/*ul > li*/
+/*hereda de liNAV tambien*/
 .liDropDown {
     display: flex;
     flex-direction: column;
@@ -127,7 +134,23 @@ nav {
     }
 }
 
-/*ul de SUBLISTA*/
+/*ul > li > a --> a de titulo de submenu*/
+/*hereda de btmNAV tambien*/
+.btmDropDown {
+    text-align: start;
+    padding: 10px;
+    background-color: #55F;
+    @media (min-width: 768px) {
+        background-color: #55F;
+    }
+}
+
+/*cambia colores del a del titulo del submenu*/
+.liDropDown:hover .btmDropDown{
+    background-color: #22F;
+}
+
+/*ul > li > ul --> ul de submenu*/
 
 .ulPadreSublista {
     background-color: #55F;
@@ -141,6 +164,7 @@ nav {
     }
 }
 
+/*cambia colores del ul de la submenu*/
 .liDropDown:hover .ulPadreSublista {
     background-color: #22F;
     @media (min-width: 768px) {
@@ -150,34 +174,26 @@ nav {
     }
 }
 
-/*etiqueta a del nav lista dropdown*/
-
-.btmDropDown {
-    text-align: start;
-    padding: 10px;
-    background-color: #55F;
-    @media (min-width: 768px) {
-        background-color: #55F;
-    }
-    
+/*ul > li > ul > li --> li de submenu*/
+/*hereda de liNAV tambien*/
+.liSublista {
+    /*flez para que el a coja el grow:1*/
+    display: flex;
 }
 
-.liDropDown:hover .btmDropDown{
-    background-color: #22F;
-    @media (min-width: 768px) {
-        background-color: #22F;
-    }
-}
-
-/*etiqueta a de la sublista*/
-
+/*ul > li > ul > li  > a --> a de submenu*/
+/*hereda de btmNAV tambien*/
 .btmSublista {
     margin: 10px;
     text-align: start;
     padding: 10px;
     background-color: #55F;
+     @media (min-width: 768px) {
+        margin: 0;
+    }
 }
 
+/*cambia color del a del submenu*/
 .liDropDown:hover .btmSublista {
     background-color: #22F;
     @media (min-width: 768px) {
@@ -185,7 +201,7 @@ nav {
     }
     
 }
-
+/*cambia color del a del submenu*/
 .liSublista:hover .btmSublista {
     background-color: #F65;
     @media (min-width: 768px) {
@@ -194,24 +210,37 @@ nav {
 }
 
 
-/*REDES SOCIALES*/
+/*-----REDES SOCIALES-----*/
 
+/*ul*/
+/*hereda de listaMenu*/
 .ulRedes {
-    display: flex;
     flex-direction: row;
     justify-content: flex-end;
     background-color: #55F;
-    flex: 0 0 50%;
+    @media (min-width: 768px) {
+        flex: 0 0 auto;
+    }
 }
+
+/*li*/
+/*hereda de liNAV tambien*/
 
 .liRedes {
+    @media (min-width: 768px) {
+        flex: 0 0 auto;
+    }
 }
 
+/*a*/
+/*hereda de btmNAV tambien*/
+
 .btmRedes {
-    border: solid 1px red;
     flex: 0 0 auto;
     padding: 0;
 }
+
+/*icono*/
 
 .iconRedes {
     font-size: 1rem;
@@ -219,20 +248,30 @@ nav {
     background-color: #55F;
 }
 
-.liRedes:hover .iconRedes{
+/*modifico el color del icono cuando estoy sobre el*/
+
+.btmRedes:hover .iconRedes{
     padding: 10px;
     background-color: #22F;
 }
 
 
-/*Drop Down and Icon*/
+/*-----Drop Down and REDES SOCIALES-----*/
+
+/*NAV*/
 
 .DropDownANDIcon {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    background-color: #55F;
 }
 
-.ulDropDown {
-    flex: 0 0 50%;
-}
+/*ul de dropdown*/
+/*hereda de listaMenu*/
 
+/*ul de Redes*/
+/*hereda de listaMenu*/
+.liRedes2 {
+    align-items: start;
+}
