@@ -1,0 +1,18 @@
+
+
+@mixin telefono {
+
+
+    @media only screen and (min-width: #{$tablet}) {
+
+        @content;
+
+    }
+
+    @media only screen and (min-width: #{$escritorio}) {
+
+        @content;
+
+    }
+
+}
