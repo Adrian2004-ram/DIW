@@ -1,18 +1,17 @@
 
 
-@mixin telefono {
+@mixin dispositivo ($tamaño) {
 
-
-    @media only screen and (min-width: #{$tablet}) {
-
-        @content;
-
-    }
-
-    @media only screen and (min-width: #{$escritorio}) {
+    @media only screen and (min-width: #{$tamaño}) {
 
         @content;
 
     }
 
+}
+
+@mixin boton() {
+    background-color: $colorFondoBoton;
+    color: aliceblue;
+    margin: 1rem;
 }
