@@ -12,6 +12,6 @@
 
 @mixin boton() {
     background-color: $colorFondoBoton;
-    color: aliceblue;
-    margin: 1rem;
+    color: $colorLetraBoton;
+    @content;
 }

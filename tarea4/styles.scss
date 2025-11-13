@@ -1,5 +1,5 @@
-@import '_mixins.scss';
-@import '_variables.scss';
+@import 'mixins.scss';
+@import 'variables.scss';
 
 * {
     margin: 0;
@@ -17,7 +17,7 @@ img {
     max-width: 100%;
 }
 
-h2 {
+h3 {
     text-transform: uppercase;
     text-align: center;
 }
@@ -49,7 +49,5 @@ article {
 }
 
 button {
-    @include boton() {
-        
-    }
+    @include boton() {}
 }
