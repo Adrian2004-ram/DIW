@@ -23,15 +23,18 @@ h1 {
 
 img {
     max-width: 100%;
+    margin-bottom: 10px;
 }
 
 h3 {
     text-transform: uppercase;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 p {
     text-align: center;
+    margin-bottom: 10px;
 }
 
 span {
@@ -56,6 +59,7 @@ article {
     flex-direction: column;
     align-items: center;
     background-color: #FFF;
+    margin-bottom: 10px;
     @include dispositivo($tablet) {
         flex-basis: $anchoTarjetaTablet;
     }
