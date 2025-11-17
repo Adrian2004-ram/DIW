@@ -1,26 +1,9 @@
 
 
-@mixin dispositivo($tamaño: $witdh-escritorio) {
+@mixin dispositivo($tamaño) {
 
     @media only screen and (min-width: $tamaño) {
         @content
     }
-
 }
 
-@mixin flexBetween($disFlex: flex, $dirección: row, $justificar: between) {
-    display: $disFlex;
-    flex-direction: $dirección;
-    justify-content: $justificar;
-}
-
-@mixin flexGrowHijo($disFlex: flex, $dirección: row) {
-    display: $disFlex;
-    flex-direction: $dirección;
-}
-
-@mixin flexColum($disFlex: flex, $dirección: column) {
-    display: $disFlex;
-    flex-direction: $dirección;
-    @content
-}

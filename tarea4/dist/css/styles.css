@@ -95,3 +95,40 @@ main article button {
 main article button:hover {
   background-color: rgb(34, 61, 101);
 }
+
+article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FFF;
+  margin-bottom: 10px;
+}
+@media only screen and (min-width: 480px) {
+  article {
+    -ms-flex-preferred-size: calc(50% - 0.5rem);
+        flex-basis: calc(50% - 0.5rem);
+  }
+}
+@media only screen and (min-width: 780px) {
+  article {
+    -ms-flex-preferred-size: calc(33.3333333333% - 0.6666666667rem);
+        flex-basis: calc(33.3333333333% - 0.6666666667rem);
+  }
+}
+
+button {
+  background-color: rgb(80, 138, 224);
+  color: #DDD;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+button:hover {
+  background-color: rgb(34, 61, 101);
+}

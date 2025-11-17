@@ -10,10 +10,6 @@
 }
 
 nav {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 1rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,16 +17,16 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: between;
-      -ms-flex-pack: between;
-          justify-content: between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .fondo-contenedor-buscador {
   background-image: url("../../img/hero.jpg");
   background-size: cover;
   background-position: center;
-  min-height: 300px;
+  height: 400px;
 }
 .fondo-contenedor-buscador .cont-column {
   display: -webkit-box;
@@ -44,6 +40,35 @@ nav {
       -ms-flex-align: start;
           align-items: flex-start;
 }
+.fondo-contenedor-buscador .cont-column h1 {
+  color: #EEE;
+}
+.fondo-contenedor-buscador .cont-column p {
+  color: #EEE;
+}
+.fondo-contenedor-buscador .cont-column form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.fondo-contenedor-buscador .cont-column form input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  padding: 5px 0;
+  background-color: #EEE;
+}
+.fondo-contenedor-buscador .cont-column form button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  padding: 5px;
+  background-color: #EEE;
+}
 
 .fondo-contenedor-info {
   background: -webkit-gradient(linear, left top, right top, from(#49245a), to(#c0364f));
@@ -53,10 +78,10 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .fondo-contenedor-info .info {
   -webkit-box-flex: 1;
@@ -69,9 +94,9 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: between;
-      -ms-flex-pack: between;
-          justify-content: between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .fondo-contenedor-info .info .flexP {
   display: -webkit-box;
