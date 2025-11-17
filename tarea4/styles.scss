@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-@import 'mixins.scss';
-@import 'variables.scss';
-=======
 @import 'variables.scss';
 @import 'mixins.scss';
->>>>>>> babac9edc92bb856e6d327a8afbe00939c80132b
 
 * {
     margin: 0;
@@ -26,58 +21,60 @@ h1 {
     margin: 1rem 0;
 }
 
-img {
-    max-width: 100%;
-    margin-bottom: 10px;
-}
-
-h3 {
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-p {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-span {
-    color: $colorEtiqueta;
-}
-
 main {
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     @include dispositivo($tablet) {
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
-    @include dispositivo($escritorio) {
 
-    }
+        article {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #FFF;
+            margin-bottom: 1rem;
+
+            @include dispositivo($tablet) {
+                flex-basis: $anchoTarjetaTablet;
+            }
+
+            @include dispositivo($escritorio) {
+                flex-basis: $anchoTarjetaDesk;
+            }
+
+            img {
+                max-width: 100%;
+                margin-bottom: 10px;
+            }
+
+            h3 {
+                text-transform: uppercase;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            p {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            span {
+                color: $colorEtiqueta;
+            }
+
+            button {
+                @include boton();
+            }
+            
+        }
 }
 
-<<<<<<< HEAD
-button {
-    @include boton() {}
-=======
-article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #FFF;
-    margin-bottom: 10px;
-    @include dispositivo($tablet) {
-        flex-basis: $anchoTarjetaTablet;
-    }
-    @include dispositivo($escritorio) {
-        flex-basis: $anchoTarjetaDesk;
-    }
-}
 
-button {
-    @include boton();
->>>>>>> babac9edc92bb856e6d327a8afbe00939c80132b
-}
+
