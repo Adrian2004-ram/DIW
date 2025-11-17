@@ -91,12 +91,9 @@ article {
 button {
   background-color: rgb(80, 138, 224);
   color: #DDD;
-<<<<<<< HEAD
-=======
   padding: 8px;
   margin-bottom: 10px;
 }
 button:hover {
   background-color: rgb(34, 61, 101);
->>>>>>> babac9edc92bb856e6d327a8afbe00939c80132b
 }

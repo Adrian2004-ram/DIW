@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-@import 'mixins.scss';
-@import 'variables.scss';
-=======
 @import 'variables.scss';
 @import 'mixins.scss';
->>>>>>> babac9edc92bb856e6d327a8afbe00939c80132b
 
 * {
     margin: 0;
@@ -59,10 +54,6 @@ main {
     }
 }
 
-<<<<<<< HEAD
-button {
-    @include boton() {}
-=======
 article {
     display: flex;
     flex-direction: column;
@@ -79,5 +70,4 @@ article {
 
 button {
     @include boton();
->>>>>>> babac9edc92bb856e6d327a8afbe00939c80132b
 }
