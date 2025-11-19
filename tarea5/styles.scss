@@ -1,5 +1,5 @@
-@import 'variables.scss';
-@import 'mixins.scss';
+@import 'variables';
+@import 'mixins';
 
 * {
     margin: 0;
@@ -47,14 +47,14 @@ nav {
             input {
                 flex: 1 0 auto;
                 padding: 5px 0;
-                background-color: #EEE
+                background-color: #EEE;
             }
 
             button {
                 
                 flex: 1 0 auto;
                 padding: 5px;
-                background-color: #EEE
+                background-color: #EEE;
 
 
             }
@@ -66,23 +66,99 @@ nav {
 
     background: linear-gradient(to right, #49245a, #c0364f);
 
-    div:first-child {
-        display: flex;
-        flex-direction: column;
-    }
-
     .info {
 
         flex-grow: 1;
+
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content:end;
+
+        img {
+            width: 30px;
+            margin: 10px;
+        }
 
         .flexP {
             display: flex;
+            flex-grow: 1;
             flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            color: #EEE;
+           
+        }
+    }
+}
+
+h2 {
+    text-align: center;
+}
+
+.cursosPadre {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+    .curso {
+
+        border: 1px solid #CCC;
+
+        margin-bottom: 1rem;
+
+        flex: 1 0 $anchoTargetaPequena;
+        
+        @include dispositivo($witdh-movil) {
+            flex: 0 0 $anchoTargetaMovil;
         }
 
+        @include dispositivo($witdh-tablet) {
+            flex: 0 0 $anchoTargetaTablet;
+        }
+
+        @include dispositivo($witdh-escritorio) {
+            flex: 0 0 $anchoTargetaEscritorio;
+        }
+
+        .fotoCurso {
+            width: 100%;
+        }
+
+        .curso-detalle {
+
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+            padding: 10px;
+
+            h4 {
+                margin-bottom: 10px;
+            }
+
+            p {
+                margin-bottom: 10px;
+            }
+
+            .estrellas {
+                margin-bottom: 10px;
+            }
+
+            i {
+                color: rgb(219, 230, 69);
+            }
+
+            .precios {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 10px;
+            }
+            
+        }
+        
     }
 
 }

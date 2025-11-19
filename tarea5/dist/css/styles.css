@@ -74,15 +74,6 @@ nav {
   background: -webkit-gradient(linear, left top, right top, from(#49245a), to(#c0364f));
   background: linear-gradient(to right, #49245a, #c0364f);
 }
-.fondo-contenedor-info div:first-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
 .fondo-contenedor-info .info {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -94,11 +85,82 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+.fondo-contenedor-info .info img {
+  width: 30px;
+  margin: 10px;
+}
+.fondo-contenedor-info .info .flexP {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  color: #EEE;
+}
+
+h2 {
+  text-align: center;
+}
+
+.cursosPadre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.fondo-contenedor-info .info .flexP {
+.cursosPadre .curso {
+  border: 1px solid #CCC;
+  margin-bottom: 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+}
+@media only screen and (min-width: 280px) {
+  .cursosPadre .curso {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 0.5rem);
+            flex: 0 0 calc(50% - 0.5rem);
+  }
+}
+@media only screen and (min-width: 480px) {
+  .cursosPadre .curso {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(33.3333333333% - 0.6666666667rem);
+            flex: 0 0 calc(33.3333333333% - 0.6666666667rem);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .cursosPadre .curso {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(25% - 0.75rem);
+            flex: 0 0 calc(25% - 0.75rem);
+  }
+}
+.cursosPadre .curso .fotoCurso {
+  width: 100%;
+}
+.cursosPadre .curso .curso-detalle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,4 +168,33 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+}
+.cursosPadre .curso .curso-detalle h4 {
+  margin-bottom: 10px;
+}
+.cursosPadre .curso .curso-detalle p {
+  margin-bottom: 10px;
+}
+.cursosPadre .curso .curso-detalle .estrellas {
+  margin-bottom: 10px;
+}
+.cursosPadre .curso .curso-detalle i {
+  color: rgb(219, 230, 69);
+}
+.cursosPadre .curso .curso-detalle .precios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
 }

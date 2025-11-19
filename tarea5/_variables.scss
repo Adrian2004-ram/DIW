@@ -1,4 +1,11 @@
 
-
+// mdea queri
+$witdh-movil: 280px;
 $witdh-tablet: 480px;
 $witdh-escritorio: 768px;
+
+// targetas cursos
+$anchoTargetaEscritorio: calc(100%/4 - 3rem/4);
+$anchoTargetaTablet: calc(100%/3 - 2rem/3);  
+$anchoTargetaMovil: calc(100%/2 - 1rem/2);
+$anchoTargetaPequena: calc(100%);
