@@ -1,0 +1,25 @@
+/****************** MIXINS ***********************/
+
+@mixin dispositivos($tamanio) {
+    @media screen and (min-width: $tamanio) {
+        @content;
+    }
+}
+
+@mixin movil($tamanio: $movil) {
+    @media screen and (max-width: $tamanio) {
+        @content;
+    }
+}
+
+@mixin boton($btm_encima: $bg_boton_encima) {
+
+    background-color: black;
+    color: #EEE;
+    padding: 10px;
+
+    &:hover {
+        background-color: $btm_encima;
+    }
+
+}

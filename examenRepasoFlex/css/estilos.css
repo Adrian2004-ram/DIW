@@ -1,0 +1,258 @@
+/****************** MIXINS ***********************/
+/***************** VARIABLES ****************/
+/* fuente */
+/* colores */
+/* imagenes */
+/* media queries */
+/* otros */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+header {
+  background-image: url(../imagenes/bg-2.jpg);
+  background-position: center;
+  background-attachment: contain;
+  background-size: cover;
+  min-height: 580px;
+  display: flex;
+  flex-direction: column;
+}
+header #fondomenu {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+header #fondomenu .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 800px) {
+  header #fondomenu .menu {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+header #fondomenu .menu .logo {
+  color: #EEE;
+  font-size: 30px;
+  text-decoration: none;
+  position: relative;
+}
+header #fondomenu .menu .logo .submenu {
+  display: none;
+}
+@media screen and (min-width: 480px) {
+  header #fondomenu .menu .logo:hover .submenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  header #fondomenu .menu .logo:hover .submenu ul {
+    list-style: none;
+  }
+  header #fondomenu .menu .logo:hover .submenu ul li {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+  }
+  header #fondomenu .menu .logo:hover .submenu ul li input {
+    flex-grow: 1;
+  }
+  header #fondomenu .menu .logo:hover .submenu ul .button {
+    display: flex;
+    justify-content: flex-end;
+  }
+  header #fondomenu .menu .logo:hover .submenu ul .button button {
+    background-color: black;
+    color: #EEE;
+    padding: 10px;
+  }
+  header #fondomenu .menu .logo:hover .submenu ul .button button:hover {
+    background-color: #546cc3;
+  }
+}
+@media screen and (min-width: 480px) {
+  header #fondomenu .menu .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list: none;
+  }
+}
+@media screen and (min-width: 800px) {
+  header #fondomenu .menu .nav {
+    flex-grow: 1;
+    justify-content: space-around;
+  }
+}
+header #fondomenu .menu .nav a {
+  color: #EEE;
+}
+@media screen and (min-width: 480px) {
+  header #fondomenu .menu .nav a {
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    padding: 5px;
+    text-decoration: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  header #fondomenu .menu .nav a i {
+    font-size: 25px;
+  }
+}
+header #fondomenu .menu .nav a span {
+  display: none;
+}
+@media screen and (min-width: 480px) {
+  header #fondomenu .menu .nav a span {
+    display: block;
+  }
+}
+header #fondomenu .menu .social {
+  display: flex;
+  flex-direction: row;
+}
+header #fondomenu .menu .social div a {
+  font-size: 25px;
+  color: #EEE;
+}
+header #fondomenu .menu .social div a i {
+  padding: 5px;
+}
+header .texto-principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+header .texto-principal h1 {
+  color: #EEE;
+  font-family: "Lora", serif;
+  font-size: 21px;
+  font-weight: 300;
+}
+header .texto-principal p {
+  color: #EEE;
+  font-size: 13px;
+}
+
+.section {
+  padding: 1rem 0;
+}
+@media screen and (min-width: 800px) {
+  .section {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.section .articulos {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 480px) {
+  .section .articulos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.section .articulos .article {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  background-color: #ececec;
+}
+@media screen and (min-width: 480px) {
+  .section .articulos .article {
+    flex: 0 0 calc(50% - 0.5rem);
+  }
+}
+@media screen and (min-width: 800px) {
+  .section .articulos .article {
+    flex: 0 0 calc(33.3333333333% - 0.6666666667rem);
+  }
+}
+.section .articulos .article img {
+  max-width: 100%;
+}
+.section .articulos .article h2 {
+  position: absolute;
+  font-size: 25px;
+  color: #fff;
+}
+.section .articulos .article a {
+  background-color: black;
+  color: #EEE;
+  padding: 10px;
+  align-self: flex-start;
+}
+.section .articulos .article a:hover {
+  background-color: #546cc3;
+}
+.section .articulos .navegacion {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #000;
+}
+.section .articulos .navegacion a {
+  background-color: black;
+  color: #EEE;
+  padding: 10px;
+}
+.section .articulos .navegacion a:hover {
+  background-color: #546cc3;
+}
+.section aside {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (min-width: 800px) {
+  .section aside {
+    flex-direction: column;
+    padding-left: 1rem;
+  }
+}
+.section aside .publicidad h4 {
+  background-color: black;
+  color: #EEE;
+}
+.section aside .publicidad img {
+  max-width: 100%;
+}
+
+.fondofooter {
+  background-color: black;
+}
+.fondofooter .footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+@media screen and (min-width: 800px) {
+  .fondofooter .footer {
+    justify-content: start;
+  }
+}
+.fondofooter .footer .pie {
+  padding: 1rem;
+}
+.fondofooter .footer .pie a {
+  color: #EEE;
+  text-decoration: none;
+}/*# sourceMappingURL=estilos.css.map */
