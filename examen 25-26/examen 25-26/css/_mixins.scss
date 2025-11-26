@@ -1,0 +1,18 @@
+/****************** MIXINS ***********************/
+
+@mixin dispositivos($tamaño) {
+    @media screen and (min-width: $tamaño) {
+        @content;
+    }
+}
+
+@mixin boton($colorFondo: $bg_boton1, $fuente: $fuenteBoton, $sombraBoton: $sombra, $color: white, $pd: 10px) {
+
+    background-color: $colorFondo;
+    font-family: $fuente;
+    box-shadow: $sombraBoton;
+    color: $color;
+    text-decoration: none;
+    padding: $pd;
+
+}

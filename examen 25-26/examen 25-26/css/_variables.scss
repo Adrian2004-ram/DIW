@@ -1,0 +1,49 @@
+/***************** VARIABLES ****************/
+
+/* fuente */
+$fuente:  'Gothic A1', sans-serif;
+$fuenteBoton: 'Oswald', sans-serif;
+$tamano_h1: 2.8rem;
+$tamano_h2: 1.6rem;
+$tamano_h3: 1.4rem;
+$tamano_p: 1.2rem;  
+$tamano_i:1.5rem;
+
+/* colores */
+$color_header: #ffffff;
+$bg_article_aside:#f2f2f2;
+$colorSpan:#536DFE;
+$bg_boton1:#455A64;
+$bg_boton2:#536DFE;
+$color_footer: #ffffff;
+
+/* imagenes */
+$bg_header: url(./../../img/fondo.jpg);
+$bg_image_footer: url(./../../img/contacto.jpg);
+
+
+/* media queries */
+$escritorio_contenedor: 1024px;
+$escritorio: 762px;
+$tablet: 480px;
+
+/* otros */
+$sombra: 5px 5px 5px gray;
+
+// para el footer
+$anchoWidget: 25%;
+
+// uso el space-araound para que deje un hueco entre el main y el aside
+// por eso hago las calculos asi
+// si diera el espacio con el margin en el aside los calculos quedarian:
+// 
+// $articleTablet: calc(100% / 2 - 1rem / 2);
+// $articleEscritorio: calc(100% / 3 - 1rem / 3);
+//
+// y en el main pondrias --> justify-content: space-between;
+//
+$articleTablet: calc(100% / 2 - 2rem / 2);
+$articleEscritorio: calc(100% / 3 - 3rem / 3);
+
+
+

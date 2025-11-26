@@ -1,0 +1,327 @@
+@import "_mixins";
+@import "_variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.contenedor {
+    margin: 0 auto;
+    max-width: $escritorio_contenedor;
+}
+
+header {
+
+    background-image: $bg_header;
+    background-repeat: no-repeat;
+    min-height: 24rem;
+    background-size: cover;
+    background-position: center center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .contenido {
+
+        flex-grow: 1;
+        
+        color: $color_header;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include dispositivos($tablet) {
+
+            align-items: flex-start;
+
+        }
+
+        @include dispositivos($escritorio) {
+
+            align-items: flex-end;
+
+        }
+
+        .titulo {
+            text-align: center;
+            font-size: $tamano_h1;
+            font-family: $fuente;
+        }
+
+        .subtitulo {
+
+            font-size: $tamano_p;
+            font-family: $fuente;
+        }
+
+    }
+  
+}
+
+nav {
+
+    background-color: black;
+
+    .menu {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        i {
+            font-size: $tamano_i;
+        }
+
+
+        @include dispositivos($tablet) {
+
+            flex-direction: row;
+            justify-content: space-between;
+
+            li {
+
+                position: relative;
+
+                a {
+                    
+                }
+
+                ul {
+
+                    display: none;
+
+                }
+
+                &:hover ul {
+
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    top: 100%;
+                    right: 0;
+                    background-color: black;
+                
+                }
+
+            }
+
+        }
+
+        li {
+
+            list-style: none;
+            padding: 10px;
+
+            a {
+                color: $color_header;
+                text-decoration: none;
+                font-family: $fuente;
+            }
+
+        }
+
+    }
+
+}
+
+.principal {
+
+    display: flex;
+    flex-direction: column;
+
+    .titulo {
+        font-size: $tamano_h1;
+        text-align: center;
+        font-family: $fuente;
+
+    }
+
+    .mainYaside {
+
+        @include dispositivos($tablet) {
+            display: flex;
+            flex-direction: row;
+        }
+
+        main {
+
+            flex-grow: 1;
+
+            @include dispositivos($tablet) {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                // uso el space-araound para que deje un hueco entre el main y el aside
+                // otra manera de hacerlo seria dandole un margin al aside directamete
+                justify-content: space-around;
+                align-items: self-start;
+            }
+
+            article {
+
+                background-color: $bg_article_aside;
+
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                margin-bottom: 1rem;
+
+                @include dispositivos($tablet) {
+                    flex-basis: $articleTablet;
+                    box-shadow: $sombra;
+                }
+
+                @include dispositivos($escritorio) {
+                    flex-basis: $articleEscritorio;
+                }
+
+                img {
+                    max-width: 100%;
+                    margin-bottom: 10px;
+                }
+
+                h3 {
+                    font-size: $tamano_h3;
+                    font-family: $fuente;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-size: $tamano_p;
+                    font-family: $fuente;
+                    margin-bottom: 10px;
+
+                    span {
+                        color: $colorSpan;
+                    }
+
+                }
+
+                .boton {
+                    @include boton;
+                    align-self: center;
+                    margin-bottom: 10px;
+                }
+
+            }
+
+        }
+
+        aside {
+
+            background-color: $bg_article_aside;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            margin-bottom: 10px;
+
+            h2 {
+                font-size: $tamano_h2;
+                font-family: $fuente;
+                padding: 10px;
+            }
+
+            a {
+
+                text-decoration: none;
+                color: black;
+            }
+
+
+        }
+
+    }
+
+    h2 {
+        font-size: $tamano_h2;
+        font-family: $fuente;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: $tamano_p;
+        font-family: $fuente;
+        margin-bottom: 10px;
+    }
+
+    .boton2 {
+        @include boton($bg_boton2);
+        flex-grow: 1;
+        align-self: self-start;
+        margin-bottom: 10px;
+    }
+
+}
+
+footer {
+    background-image: $bg_image_footer;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-top: 3rem;
+    padding: 2rem 0;
+    min-height: 20rem;
+
+    display: flex;
+    flex-direction: column;
+
+    .footer {
+
+        flex-grow: 1;
+
+        display: flex;
+        flex-direction: column;
+
+        @include dispositivos($tablet) {
+
+            flex-direction: row;
+            justify-content: space-around;
+
+        }
+
+        @include dispositivos($escritorio) {
+
+            justify-content: flex-start;
+
+        }
+
+
+        .widget {
+
+            flex-grow: 1;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            @include dispositivos($tablet) {
+
+                flex: 0 0 $anchoWidget;
+
+            }
+
+
+
+            h3 {
+                font-size: $tamano_h3;
+                font-family: $fuente;
+                color: $color_footer;
+            }
+
+            p {
+                font-size: $tamano_p;
+                font-family: $fuente;
+                color: $color_footer;
+            }
+        
+        }
+
+    }
+
+}
