@@ -1,5 +1,14 @@
-body {
-  margin: 0;
+* {
   padding: 0;
+  margin: 0;
   border: 0;
+}
+
+.contenedor {
+  margin: 0 auto;
+  width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(25%);
+  grid-template-rows: 15% 35% 35% 15%;
+  grid-template-areas: "header header header header" "main main main aside" "footer footer footer footer";
 }
