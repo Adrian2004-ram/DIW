@@ -1,5 +1,3 @@
-@import url(_mixins.scss);
-@import url(_variables.scss);
 * {
   margin: 0;
   padding: 0;
@@ -21,20 +19,61 @@ header nav {
 header nav .menu {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  place-items: center;
 }
 header nav .menu li {
   list-style: none;
 }
 header nav .menu li:hover {
   color: black;
-  background-color: color-verde;
+  background-color: #c9c84a;
 }
 header nav .menu li a {
   text-decoration: none;
   color: #EFEFEF;
   text-align: center;
+  display: block;
 }
-header .pizzaImge {
-  max-width: 100%;
+
+@media screen and (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-columns: minmax(10px, -webkit-max-content) auto minmax(100px, -webkit-max-content);
+    grid-template-columns: minmax(10px, max-content) auto minmax(100px, max-content);
+    grid-template-rows: repeat(4, auto);
+  }
+  main .pizzaImg {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    max-width: 100%;
+  }
+  main .chil-requisitos {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  main .chil-img1 {
+    grid-column: 3/4;
+    grid-row: 4/5;
+  }
+  main .chil-img2 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+  main h1 {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    text-align: center;
+  }
+  main .chil-texto {
+    grid-column: 2/3;
+    grid-row: 3/6;
+  }
+}
+
+footer div {
+  display: grid;
+  grid-column: repeat(auto-fit, minmax(200px, 1fr));
+}
+footer div .finaFooter {
+  background-color: #282828;
 }
