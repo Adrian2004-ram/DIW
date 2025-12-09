@@ -28,6 +28,12 @@ header {
             place-items: center;
             li {
                 list-style: none;
+
+                &:hover {
+                    color: black;
+                    background-color: $color-verde;
+                }
+
                 a{
                     text-decoration: none;
                     color: #EFEFEF;

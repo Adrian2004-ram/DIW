@@ -26,6 +26,10 @@ header nav .menu {
 header nav .menu li {
   list-style: none;
 }
+header nav .menu li:hover {
+  color: black;
+  background-color: color-verde;
+}
 header nav .menu li a {
   text-decoration: none;
   color: #EFEFEF;
