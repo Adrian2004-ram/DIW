@@ -14,7 +14,6 @@ header .logo {
 }
 header nav {
   background-color: black;
-  padding: 5px 0;
 }
 header nav .menu {
   display: grid;
@@ -32,48 +31,111 @@ header nav .menu li a {
   color: #EFEFEF;
   text-align: center;
   display: block;
+  padding: 5px 0;
+}
+header .pizzaImg {
+  max-width: 100%;
 }
 
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+}
 @media screen and (min-width: 768px) {
   main {
-    display: grid;
-    grid-template-columns: 1fr;
     grid-template-columns: minmax(10px, -webkit-max-content) auto minmax(100px, -webkit-max-content);
     grid-template-columns: minmax(10px, max-content) auto minmax(100px, max-content);
     grid-template-rows: repeat(4, auto);
+    gap: 1rem;
   }
-  main .pizzaImg {
-    grid-column: 1/4;
-    grid-row: 1/2;
-    max-width: 100%;
-  }
+}
+main .chil-requisitos {
+  background-color: #c9c84a;
+}
+@media screen and (min-width: 768px) {
   main .chil-requisitos {
     grid-column: 1/2;
-    grid-row: 3/4;
+    grid-row: 2/3;
   }
+}
+main .chil-requisitos li {
+  list-style: none;
+  text-align: center;
+  color: #EFEFEF;
+  padding: 1rem;
+}
+main .chil-img1 {
+  justify-self: center;
+}
+@media screen and (min-width: 768px) {
   main .chil-img1 {
     grid-column: 3/4;
-    grid-row: 4/5;
+    grid-row: 3/4;
+    max-width: 100%;
   }
+}
+main .chil-img2 {
+  justify-self: center;
+}
+@media screen and (min-width: 768px) {
   main .chil-img2 {
     grid-column: 1/2;
     grid-row: 5/6;
+    max-width: 100%;
   }
+}
+@media screen and (min-width: 768px) {
   main h1 {
     grid-column: 1/4;
-    grid-row: 2/3;
+    grid-row: 1/2;
     text-align: center;
   }
-  main .chil-texto {
+}
+@media screen and (min-width: 768px) {
+  main .chil-texto1 {
     grid-column: 2/3;
-    grid-row: 3/6;
+    grid-row: 2/3;
+  }
+}
+@media screen and (min-width: 768px) {
+  main .chil-texto2 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+}
+@media screen and (min-width: 768px) {
+  main .chil-texto3 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+}
+@media screen and (min-width: 768px) {
+  main .chil-texto4 {
+    grid-column: 2/3;
+    grid-row: 5/6;
   }
 }
 
+footer {
+  background-color: #c9c84a;
+}
 footer div {
   display: grid;
-  grid-column: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
-footer div .finaFooter {
+footer div .lista-footer {
+  list-style: none;
+}
+footer div .lista-footer .titulo-footer a {
+  text-decoration: none;
+}
+footer div .lista-footer .punto-footer a {
+  text-decoration: none;
+  color: #373737;
+}
+footer .finaFooter {
   background-color: #282828;
+  color: #EFEFEF;
+  text-align: center;
+  padding: 5px;
 }
