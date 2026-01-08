@@ -1,0 +1,22 @@
+@import 'variables';
+@import 'mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* HEADER */
+
+header {
+    background-color: $primario;
+}
+
+nav {
+    
+}
