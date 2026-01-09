@@ -5,18 +5,207 @@
     margin: 0;
     padding: 0;
     border: 0;
+
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100,
+        "GRAD" 0;
 }
 
 img {
     max-width: 100%;
 }
 
+.conteiner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
 /* HEADER */
 
 header {
     background-color: $primario;
+
+    div {
+
+        @include desktop() {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        img {
+            padding: 16px 0;
+        }
+
+        nav {
+
+            @include desktop() {
+                grid-column: 3 / 4;
+                align-self: center;
+            }
+
+            ul {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+
+                li {
+                    list-style: none;
+                    color: $claro;
+                    text-align: center;
+                    padding: 16px 0;
+                }
+            }
+        }
+    }
 }
 
-nav {
+
+
+/* MAIN */
+
+main {
+    background-color: $gris;
+    padding: 16px;
+}
+
+/* Seccion 1 */
+
+.sec1 {
+
+    @include desktop() {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    img {
+        /* se centra asi la img ¿? */
+        display: block;
+        justify-self: center;
+    }
+
+    div {
+        @include desktop() {
+            align-self: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 16px;
+
+            @include desktop() {
+                text-align: left;
+            }
+        }
+
+        p {
+            text-align: center;
+            margin-top: 16px;
+
+            @include desktop() {
+                text-align: left;
+            }
+        }
+    }
+}
+
+/* Articles */
+
+.casasVenta {
+
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    @include desktop() {
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+}
+
+.destacado {
+    grid-column: 1 / span 2;
+
+    @include tablet() {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+.destacado img {
+
+    @include tablet() {
+        height: 100%;
+        /* dar otra propiedad a img ¿? */
+    }
+
+}
+
+.casasVenta article {
+    background-color: $claro;
+    border: 1px solid $negro;
+}
+
+.casasVenta article .infoCasa {
+
+    padding: $padding;
+
+    h2 {
+        font-size: 24px;
+        margin-top: 16px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-top: 16px;
+    }
+
+    .precio {
+        font-weight: 700;
+
+        span {
+            color: $primario;
+        }
+    }
+
+    button {
+        margin: 16px 0;
+        width: 100%;
+        text-align: center;
+        background-color: $primario;
+        color: $claro;
+        font-size: 16px;
+        padding: $padding 0;
+    }
+
+    button:hover {
+        background-color: $oscuro;
+    }
+
+}
+
+/* FOOTER */
+
+footer {
+    background-color: $primario;
+    color: $claro;
     
+    .menuF {
+
+
+        @include desktop() {
+            display: grid;
+            grid-template-columns: 30% 20% 2fr;
+        }
+    }
+
+    .derechos {
+        background-color: $oscuro;
+    }
+
 }

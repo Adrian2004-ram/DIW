@@ -1,0 +1,13 @@
+// mixins.scss
+
+@mixin tablet($size: $tablet) {
+    @media screen and (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin desktop($size: $desktop) {
+    @media screen and (min-width: $size) {
+        @content;
+    }
+}
