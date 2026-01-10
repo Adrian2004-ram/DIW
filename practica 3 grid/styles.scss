@@ -197,15 +197,63 @@ footer {
     
     .menuF {
 
+        padding: 16px 0;
 
         @include desktop() {
             display: grid;
             grid-template-columns: 30% 20% 2fr;
         }
+        
+        div {
+
+            .titulF {
+                margin-top: 16px;
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 15px;
+                margin-top: 16px;
+            }
+
+            ul {
+                display: grid;
+                grid-template-columns: 1fr;
+                li {
+                    margin-top: 16px;
+                    list-style: none;
+                    a {
+                        text-decoration: none;
+                        color: $claro;
+                    }
+                }
+            }
+        }
+
+        .fatherArticlesF {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+
+            .articleF {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+                margin-top: 20px;
+
+                .contenF {
+                    align-self: center;
+                }
+            }
+        }
     }
 
     .derechos {
         background-color: $oscuro;
+        padding: 20px 0;
+        p {
+            text-align: center;
+        }
     }
 
 }
