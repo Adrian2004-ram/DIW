@@ -29,7 +29,7 @@ header {
 @media screen and (min-width: 700px) {
   header div {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 30% 1fr 30%;
   }
 }
 header div img {
@@ -43,7 +43,7 @@ header div img {
 }
 header div nav ul {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 header div nav ul li {
   list-style: none;
@@ -59,21 +59,22 @@ main {
 }
 
 /* Seccion 1 */
+.sec1 {
+  display: grid;
+}
 @media screen and (min-width: 700px) {
   .sec1 {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
 .sec1 img {
-  /* se centra asi la img ¿? */
-  display: block;
   justify-self: center;
 }
 @media screen and (min-width: 700px) {
   .sec1 div {
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
   }
 }
 .sec1 div h1 {
@@ -120,8 +121,10 @@ main {
 
 @media screen and (min-width: 480px) {
   .destacado img {
-    height: 100%;
     /* dar otra propiedad a img ¿? */
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -206,7 +209,8 @@ footer .menuF .fatherArticlesF .articleF {
   margin-top: 20px;
 }
 footer .menuF .fatherArticlesF .articleF .contenF {
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 footer .derechos {
   background-color: #57a42b;
@@ -214,4 +218,4 @@ footer .derechos {
 }
 footer .derechos p {
   text-align: center;
-}/*# sourceMappingURL=styles.css.map */
+}
