@@ -2,45 +2,80 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tarea 3 Bootstrap</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 3 Bootstrap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 </head>
 
 <body>
 
-  <header class="bg-primary">
-    <div class="container">
-      <div class="row">
-        <div class="col-auto">
-          <p class="text-white mb-0">Bootstrap 4!</p>
-        </div>
-        <!--NAV-->
-        <nav class="navbar navbar-expand-lg">
-          <!--Ul dentr del NAV-->
-          <ul class="navbar-nav">
+    <header class="bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-auto">
+                    <p class="text-white mb-0">Bootstrap 4!</p>
+                </div>
+                
+                
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Mi Sitio</a>
 
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-            <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="#">Link</a></li>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">DropDown</a>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Inicio</a>
+        </li>
+
+        <!-- Dropdown principal -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            Servicios
+          </a>
+
+          <ul class="dropdown-menu">
+
+            <li><a class="dropdown-item" href="#">Diseño Web</a></li>
+            <li><a class="dropdown-item" href="#">Marketing</a></li>
+
+            <!-- Submenú SIN CSS -->
+            <li class="dropdown">
+              <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                Más opciones
+              </a>
+
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Diseño Web</a></li>
-                <li><a class="dropdown-item" href="#">Marketing</a></li>
+                <li><a class="dropdown-item" href="#">Opción 1</a></li>
+                <li><a class="dropdown-item" href="#">Opción 2</a></li>
               </ul>
             </li>
 
-            <li class="nav-item"><a class="nav-link text-white" href="#">+56 5 5555 5555</a></li>
-
-
           </ul>
-        </nav>
-      </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+
+      </ul>
     </div>
-  </header>
+  </div>
+</nav>
+
+
+
+
+
+            </div>
+        </div>
+    </header>
 
 
 </body>
